@@ -20,7 +20,8 @@
 #include <cstring>
 #include <ctime>
 using namespace std;
-#define rep(i, n) for(int (i)=0;(i)<(n);(i)++)
+#define FOR(i,a,b) for(int i=(a);i<(b);++i)
+#define REP(i,n)  FOR(i,0,n)
 #define ARRAY_LENGTH(array) (sizeof(array) / sizeof(array[0]))
 
 int main() {
@@ -33,7 +34,7 @@ int main() {
   // rep
   int sum = 0;
   int array_num[10] = {1,2,3,4,5,6,7,8,9};
-  rep(i, 10) {
+  REP(i, 10) {
     sum += array_num[i];
   }
   cout << sum << endl;

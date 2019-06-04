@@ -20,7 +20,8 @@
 #include <cstring>
 #include <ctime>
 using namespace std;
-#define rep(i, n) for(int (i)=0;(i)<(n);(i)++)
+#define FOR(i,a,b) for(int i=(a);i<(b);++i)
+#define REP(i,n)  FOR(i,0,n)
 #define ARRAY_LENGTH(array) (sizeof(array) / sizeof(array[0]))
 
 int main() {
@@ -29,14 +30,14 @@ int main() {
       sum_vec;
 
   int ary[5] = {1,2,3,4,5};
-  rep(i, ARRAY_LENGTH(ary)) {
+  REP(i, ARRAY_LENGTH(ary)) {
     sum += ary[i];
   }
   cout << sum << endl;
 
   // ベクター, clang++ -std=c++11 -o hoge hoge.cpp でコンパイル
   vector<int> v;
-  rep(i, 6) {
+  REP(i, 6) {
     v.push_back(i);
   }
   for (auto x: v) {
