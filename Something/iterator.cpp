@@ -24,18 +24,27 @@ using namespace std;
 #define ARRAY_LENGTH(array) (sizeof(array) / sizeof(array[0]))
 
 int main() {
-  int a[10] = {1,2,3,4,5,6,7,8,9,0};
-  // 配列長とれる
-  cout << ARRAY_LENGTH(a) << endl;
-  // こっちが(手間的に)はやそう
-  vector<int> vec{ 1, 2, 3, 4, 5 };
-  cout << vec.size() << endl;
-  // rep
-  int sum = 0;
-  int array_num[10] = {1,2,3,4,5,6,7,8,9};
-  rep(i, 10) {
-    sum += array_num[i];
+  // マクロのアレ
+  int sum,
+      sum_vec;
+
+  int ary[5] = {1,2,3,4,5};
+  rep(i, ARRAY_LENGTH(ary)) {
+    sum += ary[i];
   }
   cout << sum << endl;
+
+  // ベクター, clang++ -std=c++11 -o hoge hoge.cpp でコンパイル
+  vector<int> v;
+  rep(i, 6) {
+    v.push_back(i);
+  }
+  for (auto x: v) {
+    sum_vec += x;
+    cout << x << " ";
+  }
+  cout << endl;
+  cout << sum << endl;
+
   return 0;
-}                
+}
