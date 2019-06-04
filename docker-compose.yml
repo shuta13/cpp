@@ -1,0 +1,7 @@
+version: '3'
+services:
+  cpp-env:
+    build: .
+    volumes: 
+      - .:/cpp-dev
+    working_dir: /cpp-dev
