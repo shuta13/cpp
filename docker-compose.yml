@@ -4,4 +4,4 @@ services:
     build: .
     volumes: 
       - .:/cpp-dev
-    working_dir: /cpp-dev
+    working_dir: /cpp-dev/AtCoder
